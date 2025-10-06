@@ -14,7 +14,7 @@ This document outlines the principles of this methodology, using my latest work,
 
 ### 1. Architect, Don't Just Prompt
 
-Instead of a single, monolithic prompt, you should design the agent's thought process as a **cognitive architecture**. This involves defining the agent's `MEMORY` (its workspace), its `LOOP` (its sequence of cognitive actions), and its `TEMPLATES` (its voice). Project Eidolon uses a "Cognitive Refractor" loop, where it analyzes a concept through multiple lenses in parallel.
+Instead of a single, monolithic prompt, you should design the agent's thought process as a **cognitive architecture**. This involves defining the agent's `MEMORY` (its workspace), its `STATE_MACHINE` (its sequence of states and actions), and its `TEMPLATES` (its voice). Project Eidolon uses a simple but robust state machine with a `DORMANT` state for waiting and an `ACTIVE` state that contains the "Cognitive Refractor" loop. This ensures the agent's behavior is predictable and robust.
 
 ### 2. Use a Symbolic Protocol
 
